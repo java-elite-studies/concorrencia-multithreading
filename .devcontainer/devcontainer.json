@@ -20,6 +20,6 @@
       ]
     }
   },
-  "postCreateCommand": "mvn compile -q || true",
+  "postCreateCommand": "mvn -q -DskipTests compile",
   "remoteUser": "vscode"
 }

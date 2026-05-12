@@ -2,9 +2,11 @@
 
 Projeto Java para estudos de concorrencia e multithreading.
 
+A estrutura foi preparada com base no formato de execucao do projeto `Concorrencia-Multithreading/aulas` do repositorio publico `eldermoraes/unipds`, sem copiar o codigo de aulas.
+
 ## Requisitos
 
-- Java 24
+- Java 17+ (local) ou Java 24 no Dev Container
 - Maven 3.9+
 
 ## Dev Container (VS Code)
@@ -23,17 +25,25 @@ O ambiente tera automaticamente:
 - **Maven 3.9.9**
 - Extensoes do VS Code para desenvolvimento Java (Language Support, Debugger, Maven, Test Runner)
 
-### Executando os exemplos
+## Estrutura do projeto Java
 
-Cada classe possui um metodo `main` independente. Para executar:
+- Projeto Maven em raiz (`pom.xml`)
+- Classes Java em `src/main/java`
+- Testes em `src/test/java`
+- Execucao por classes com metodo `main` (padrao de aulas)
 
-- Abra o arquivo `.java` desejado
-- Clique no botao **Run** que aparece acima do metodo `main`
-- Ou use `F5` para executar com debug
+## Executando
 
-Via terminal:
+Compilar e testar:
 
 ```bash
-mvn compile
-mvn exec:java -Dexec.mainClass="com.eldermoraes.aula02.Ex1CpuBoundTasksExample"
+mvn clean test
 ```
+
+Executar uma classe com `main`:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.eldermoraes.aula01.ExemploInicial"
+```
+
+No VS Code, abra uma classe com `main` e use o botao **Run** acima do metodo.
