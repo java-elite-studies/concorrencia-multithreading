@@ -21,14 +21,18 @@ Este projeto inclui um [Dev Container](https://containers.dev/) pronto para uso 
 O ambiente tera automaticamente:
 - **Java 25** (Eclipse Temurin)
 - **Maven 3.9.9**
+- **Code Runner** para executar classes Java com um clique
+- **Bearded Theme Oceanic** como tema visual
 - Extensoes do VS Code para desenvolvimento Java (Language Support, Debugger, Maven, Test Runner)
+- Arquivos de compilacao ocultos no explorer (pastas `build/` e `target/`)
 
 ### Executando os exemplos
 
 Cada classe possui um metodo `main` independente. Para executar:
 
 - Abra o arquivo `.java` desejado
-- Clique no botao **Run** que aparece acima do metodo `main`
+- Clique no botao **Play** (triangulo) no canto superior direito do editor
+- Ou clique no botao **Run** que aparece acima do metodo `main`
 - Ou use `F5` para executar com debug
 
 Via terminal:
