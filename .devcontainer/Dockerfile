@@ -1,4 +1,4 @@
-FROM eclipse-temurin:24-jdk
+FROM eclipse-temurin:25-jdk
 
 ARG MAVEN_VERSION=3.9.9
 
