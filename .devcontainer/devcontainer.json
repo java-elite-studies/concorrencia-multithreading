@@ -1,0 +1,38 @@
+{
+  "name": "Concorrencia e Multithreading - Java 25",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.compile.nullAnalysis.mode": "automatic",
+        "java.jdt.ls.java.home": "/opt/java/openjdk",
+        "java.project.outputPath": "build",
+        "editor.formatOnSave": true,
+        "workbench.colorTheme": "Bearded Theme Oceanic",
+        "code-runner.runInTerminal": true,
+        "code-runner.saveFileBeforeRun": true,
+        "code-runner.executorMap": {
+          "java": "cd $workspaceRoot && javac -d build $fileName && java -cp build $qualifiedClassName"
+        },
+        "files.exclude": {
+          "build/": true,
+          "target/": true
+        }
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-maven",
+        "redhat.java",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-test",
+        "formulahendry.code-runner",
+        "BeardedBear.beardedtheme"
+      ]
+    }
+  },
+  "postCreateCommand": "mkdir -p build && mvn compile -q || true",
+  "remoteUser": "vscode"
+}
